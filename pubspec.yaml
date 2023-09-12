@@ -1,7 +1,11 @@
 name: emulated_data_types
-description: A new Flutter project.
+description: A Dart package for emulating Dart data types
 version: 0.0.1
-homepage:
+
+author: Shehab Anwar
+homepage: https://github.com/Shehab-Anwar-X/emulated_data_types
+repository: https://github.com/Shehab-Anwar-X/emulated_data_types
+
 
 environment:
   sdk: '>=3.0.3 <4.0.0'

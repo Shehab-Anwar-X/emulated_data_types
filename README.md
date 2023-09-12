@@ -1,39 +1,50 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Emulated Dart Data Types
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The Emulated Dart Data Types package is a comprehensive toolkit for emulating and working with Dart's built-in data types. Whether you're building a custom type system, need to represent Dart data types in a different context, or want to facilitate data type conversions, this package provides a versatile solution.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Emulate Dart's Primitive Data Types:** The package allows you to emulate Dart's primitive data types, including `int`, `double`, `String`, `bool`, and more. This is particularly useful when you need to work with custom data types that mirror Dart's built-ins.
 
-## Getting started
+- **Simplify Collections Representation:** Easily represent collections like `List` and `Map` using pre-defined classes, simplifying your data modeling tasks and enhancing code readability.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- **Dynamic Custom Data Types:** With the `CustomizeDataType` class, you can dynamically create and work with customized data types during runtime. This flexibility is perfect for scenarios where you need to define new data types on the fly.
 
-## Usage
+- **Emulate Asynchronous Data Types:** The package provides support for emulating asynchronous data types, including `Future` and `Stream`. This enables you to handle asynchronous data operations seamlessly.
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+- **Special Data Types Handling:** Special data types like `void` and `dynamic` are also covered by dedicated classes, ensuring you can work with all types in Dart's type system.
+
+## Example Usage
+
+Here's a simple example demonstrating how to use this package:
 
 ```dart
-const like = 'sample';
+import 'package:emulated_dart_data_types/emulated_dart_data_types.dart';
+
+void main() {
+  final intType = EmInt();
+  final stringType = EmString();
+  final listType = EmList(wrapped: intType);
+  
+  print(intType.toString());      // Output: "int"
+  print(stringType.toString());   // Output: "String"
+  print(listType.toString());     // Output: "List<int>"
+}
 ```
+This package enables you to work with Dart data types in unique ways, making it suitable for various applications where data type emulation and conversions are required.
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Code Structure 
+
+```dart
+    lib
+    ├── emulated_data_types.dart
+    ├── serializer.dart
+    └── src/
+        ├── asynchronous.dart
+        ├── collection.dart
+        ├── custom.dart
+        ├── data_type.dart
+        ├── primitive.dart
+        └── special.dart
+```
