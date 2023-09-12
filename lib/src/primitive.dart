@@ -1,19 +1,19 @@
 import 'data_type.dart';
 
-abstract class NumericDataType implements PrimitiveDataType<num> {
-  const NumericDataType();
+abstract class NumericDataType extends PrimitiveDataType<num> {
+  const NumericDataType({super.nullable});
 }
 
-abstract class StringsDataType implements PrimitiveDataType<String> {
-  const StringsDataType();
+abstract class StringsDataType extends PrimitiveDataType<String> {
+  const StringsDataType({super.nullable});
 }
 
-abstract class BooleansDataType implements PrimitiveDataType<bool> {
-  const BooleansDataType();
+abstract class BooleansDataType extends PrimitiveDataType<bool> {
+  const BooleansDataType({super.nullable});
 }
 
-class EmInt implements NumericDataType {
-  EmInt();
+class EmInt extends NumericDataType {
+  EmInt({super.nullable});
 
   @override
   final nativeTypeName = 'int';
@@ -24,8 +24,8 @@ class EmInt implements NumericDataType {
   }
 }
 
-class EmDouble implements NumericDataType {
-  EmDouble();
+class EmDouble extends NumericDataType {
+  EmDouble({super.nullable});
 
   @override
   final nativeTypeName = 'double';
@@ -36,8 +36,8 @@ class EmDouble implements NumericDataType {
   }
 }
 
-class EmNum implements NumericDataType {
-  EmNum();
+class EmNum extends NumericDataType {
+  EmNum({super.nullable});
 
   @override
   final nativeTypeName = 'num';
@@ -55,8 +55,8 @@ class EmNum implements NumericDataType {
 //   BigInt? value;
 // }
 
-class EmString implements StringsDataType {
-  EmString();
+class EmString extends StringsDataType {
+  EmString({super.nullable});
 
   @override
   final nativeTypeName = 'String';
@@ -67,8 +67,8 @@ class EmString implements StringsDataType {
   }
 }
 
-class EmBoolean implements BooleansDataType {
-  EmBoolean();
+class EmBoolean extends BooleansDataType {
+  EmBoolean({super.nullable});
 
   @override
   final nativeTypeName = 'bool';

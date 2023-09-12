@@ -2,8 +2,8 @@ import 'data_type.dart';
 import '../serializer.dart';
 
 class EmList<elementType extends DataType>
-    implements CollectionDataType<List<elementType>> {
-  const EmList({required this.wrapped});
+    extends CollectionDataType<List<elementType>> {
+  const EmList({required this.wrapped, super.nullable});
 
   final DataType wrapped;
 
@@ -17,8 +17,8 @@ class EmList<elementType extends DataType>
 }
 
 class EmMap<kType extends DataType, vType extends DataType>
-    implements CollectionDataType<Map<kType, vType>> {
-  EmMap({required this.wrappedKey, required this.wrappedValue});
+    extends CollectionDataType<Map<kType, vType>> {
+  EmMap({required this.wrappedKey, required this.wrappedValue, super.nullable});
 
   final DataType wrappedKey;
   final DataType wrappedValue;

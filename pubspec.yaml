@@ -1,8 +1,7 @@
 name: emulated_data_types
 description: A Dart package for emulating Dart data types
-version: 0.0.1
+version: 0.0.2
 
-author: Shehab Anwar
 homepage: https://github.com/Shehab-Anwar-X/emulated_data_types
 repository: https://github.com/Shehab-Anwar-X/emulated_data_types
 

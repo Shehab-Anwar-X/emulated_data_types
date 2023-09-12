@@ -2,8 +2,8 @@ import 'data_type.dart';
 import '../serializer.dart';
 
 class EmFuture<elementType extends DataType>
-    implements AsynchronousDataType<elementType> {
-  const EmFuture({required this.wrapped});
+    extends AsynchronousDataType<elementType> {
+  const EmFuture({required this.wrapped, super.nullable});
 
   final DataType wrapped;
 
@@ -17,8 +17,8 @@ class EmFuture<elementType extends DataType>
 }
 
 class EmStream<elementType extends DataType>
-    implements AsynchronousDataType<elementType> {
-  const EmStream({required this.wrapped});
+    extends AsynchronousDataType<elementType> {
+  const EmStream({required this.wrapped, super.nullable});
 
   final DataType wrapped;
 

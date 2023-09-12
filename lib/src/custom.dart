@@ -1,8 +1,8 @@
 import 'data_type.dart';
 import '../serializer.dart';
 
-class EmCustomDataType implements CustomizeDataType {
-  EmCustomDataType({required this.dataType});
+class EmCustomDataType extends CustomizeDataType {
+  EmCustomDataType({required this.dataType, super.nullable});
 
   @override
   final String dataType;
