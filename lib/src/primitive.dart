@@ -1,19 +1,22 @@
 import 'data_type.dart';
 
 abstract class NumericDataType extends PrimitiveDataType<num> {
-  const NumericDataType({super.nullable});
+  const NumericDataType();
 }
 
 abstract class StringsDataType extends PrimitiveDataType<String> {
-  const StringsDataType({super.nullable});
+  const StringsDataType();
 }
 
 abstract class BooleansDataType extends PrimitiveDataType<bool> {
-  const BooleansDataType({super.nullable});
+  const BooleansDataType();
 }
 
 class EmInt extends NumericDataType {
-  EmInt({super.nullable});
+  EmInt({this.nullable = false});
+
+  @override
+  final bool nullable;
 
   @override
   String get nativeTypeName => 'int${nullable ? '?' : ''}';
@@ -25,7 +28,10 @@ class EmInt extends NumericDataType {
 }
 
 class EmDouble extends NumericDataType {
-  EmDouble({super.nullable});
+  EmDouble({this.nullable = false});
+
+  @override
+  final bool nullable;
 
   @override
   String get nativeTypeName => 'double${nullable ? '?' : ''}';
@@ -37,7 +43,10 @@ class EmDouble extends NumericDataType {
 }
 
 class EmNum extends NumericDataType {
-  EmNum({super.nullable});
+  EmNum({this.nullable = false});
+
+  @override
+  final bool nullable;
 
   @override
   String get nativeTypeName => 'num${nullable ? '?' : ''}';
@@ -56,7 +65,10 @@ class EmNum extends NumericDataType {
 // }
 
 class EmString extends StringsDataType {
-  EmString({super.nullable});
+  EmString({this.nullable = false});
+
+  @override
+  final bool nullable;
 
   @override
   String get nativeTypeName => 'String${nullable ? '?' : ''}';
@@ -68,7 +80,10 @@ class EmString extends StringsDataType {
 }
 
 class EmBoolean extends BooleansDataType {
-  EmBoolean({super.nullable});
+  EmBoolean({this.nullable = false});
+
+  @override
+  final bool nullable;
 
   @override
   String get nativeTypeName => 'bool${nullable ? '?' : ''}';

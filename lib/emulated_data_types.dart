@@ -10,3 +10,4 @@ export 'src/custom.dart';
 export 'src/data_type.dart';
 export 'src/primitive.dart';
 export 'src/special.dart';
+export 'src/nullable.dart';
