@@ -16,7 +16,7 @@ class EmInt extends NumericDataType {
   EmInt({super.nullable});
 
   @override
-  final nativeTypeName = 'int';
+  String get nativeTypeName => 'int${nullable ? '?' : ''}';
 
   @override
   String toString() {
@@ -28,7 +28,7 @@ class EmDouble extends NumericDataType {
   EmDouble({super.nullable});
 
   @override
-  final nativeTypeName = 'double';
+  String get nativeTypeName => 'double${nullable ? '?' : ''}';
 
   @override
   String toString() {
@@ -40,7 +40,7 @@ class EmNum extends NumericDataType {
   EmNum({super.nullable});
 
   @override
-  final nativeTypeName = 'num';
+  String get nativeTypeName => 'num${nullable ? '?' : ''}';
 
   @override
   String toString() {
@@ -59,7 +59,7 @@ class EmString extends StringsDataType {
   EmString({super.nullable});
 
   @override
-  final nativeTypeName = 'String';
+  String get nativeTypeName => 'String${nullable ? '?' : ''}';
 
   @override
   String toString() {
@@ -71,7 +71,7 @@ class EmBoolean extends BooleansDataType {
   EmBoolean({super.nullable});
 
   @override
-  final nativeTypeName = 'bool';
+  String get nativeTypeName => 'bool${nullable ? '?' : ''}';
 
   @override
   String toString() {

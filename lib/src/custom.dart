@@ -8,7 +8,7 @@ class EmCustomDataType extends CustomizeDataType {
   final String dataType;
 
   @override
-  String get nativeTypeName => dataType;
+  String get nativeTypeName => '$dataType${nullable ? '?' : ''}';
 
   @override
   String toString() {
