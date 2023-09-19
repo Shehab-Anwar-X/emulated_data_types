@@ -48,3 +48,5 @@ Code Structure
         ├── primitive.dart
         └── special.dart
 ```
+
+dart pub publish --server=https://pub.dartlang.org

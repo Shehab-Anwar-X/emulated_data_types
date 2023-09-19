@@ -1,3 +1,5 @@
+import 'package:emulated_data_types/src/date_time.dart';
+
 import 'src/special.dart';
 import 'src/asynchronous.dart';
 import 'src/collection.dart';
@@ -75,14 +77,16 @@ abstract class DataTypeSerializer {
       return const EmVoid();
     } else if (value == const EmDynamic().nativeTypeName) {
       return const EmDynamic();
+    } else if (value == const EmDateTime().nativeTypeName) {
+      return const EmDateTime();
     } else {
+      // EmEnum();
       return EmCustomDataType(dataType: trimmedValue);
     }
   }
 
   static String convertToString(DataType object) {
     if (object is PrimitiveDataType) {
-      object.nullable;
       return object.nativeTypeName;
     } else if (object is CollectionDataType) {
       if (object is EmList) {
@@ -108,6 +112,10 @@ abstract class DataTypeSerializer {
         throw 'Unsupported Asynchronous Data Type!';
       }
     } else if (object is SpecialDataTypes) {
+      return object.nativeTypeName;
+    } else if (object is EnumerationDataType) {
+      return object.nativeTypeName;
+    } else if (object is EmDateTime) {
       return object.nativeTypeName;
     } else {
       throw 'Unsupported Data Type!';

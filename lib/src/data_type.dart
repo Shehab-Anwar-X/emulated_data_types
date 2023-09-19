@@ -8,14 +8,12 @@ abstract class DataType<T> {
 }
 
 /// Represent the primitive data types like int, double, String, bool, ..etc.
-abstract class PrimitiveDataType<T>
-    implements DataType<T>, NullableDataType, BuiltInDataType {
+abstract class PrimitiveDataType<T> implements DataType<T>, NullableDataType {
   const PrimitiveDataType();
 }
 
 /// Represent the collections data types like List and Map
-abstract class CollectionDataType<T>
-    implements DataType<T>, NullableDataType, BuiltInDataType {
+abstract class CollectionDataType<T> implements DataType<T>, NullableDataType {
   const CollectionDataType();
 }
 
@@ -30,14 +28,24 @@ abstract class CustomizeDataType
 
 /// Represent the Future and Stream types.
 abstract class AsynchronousDataType<T>
-    implements DataType<T>, NullableDataType, BuiltInDataType {
+    implements DataType<T>, NullableDataType {
   const AsynchronousDataType();
 }
 
 /// Represent the special data types like void and dynamic types.
-abstract class SpecialDataTypes<T> implements DataType<T>, BuiltInDataType {
+abstract class SpecialDataTypes<T> implements DataType<T> {
   const SpecialDataTypes();
 }
 
-/// Built-in types
-abstract class BuiltInDataType {}
+/// Represent the enum data types.
+abstract class EnumerationDataType implements DataType<Enum>, NullableDataType {
+  const EnumerationDataType();
+
+  String get enumName;
+}
+
+/// Represent the DateTime type.
+abstract class DateTimeDataType
+    implements DataType<DateTime>, NullableDataType {
+  const DateTimeDataType();
+}
